@@ -33,4 +33,4 @@ RUN chmod -R 755 /var/www
 EXPOSE 8090 8091 8092
 
 RUN systemctl start apache2
-CMD systemctl start apache2
+#CMD systemctl start apache2
