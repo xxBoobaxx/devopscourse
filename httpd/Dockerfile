@@ -14,6 +14,8 @@ RUN systemctl enable apache2
 
 RUN systemctl start apache2
 
+RUN ufw disable
+
 RUN rm -f /etc/httpd/conf/httpd.conf
 
 COPY httpd.conf /etc/httpd/conf/httpd.conf
