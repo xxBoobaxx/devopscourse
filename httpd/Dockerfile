@@ -14,9 +14,9 @@ RUN systemctl enable apache2
 
 RUN systemctl start apache2
 
-RUN rm -f /etc/httpd/conf/httpd.conf
+RUN rm -f /etc/apache2/ports.conf
 
-COPY httpd.conf /etc/httpd/conf/httpd.conf
+COPY ports.conf /etc/apache2/ports.conf
 COPY site1.com  /var/www/site1.com
 COPY site2.com  /var/www/site2.com
 COPY site3.com  /var/www/site3.com
