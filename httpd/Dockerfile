@@ -1,6 +1,6 @@
 FROM httpd
 
-RUN apt update && apt upgrade 
+RUN sudo apt update
 
 RUN mkdir /var/www
 
