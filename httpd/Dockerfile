@@ -25,9 +25,9 @@ COPY site2.com  /var/www/site2.com
 COPY site3.com  /var/www/site3.com
 
 RUN a2dissite 000-default.conf
-RUN a2ensite site1.com.conf
-RUN a2ensite site2.com.conf
-RUN a2ensite site3.com.conf
+RUN a2ensite site1com.conf
+RUN a2ensite site2com.conf
+RUN a2ensite site3com.conf
 
 RUN chown -R $USER:$USER /var/www/
 RUN chmod -R 755 /var/www
