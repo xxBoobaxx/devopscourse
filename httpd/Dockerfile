@@ -12,8 +12,6 @@ RUN apt install -y systemctl
 
 RUN systemctl enable apache2
 
-RUN systemctl start apache2
-
 RUN rm -f /etc/apache2/ports.conf
 RUN rm -f /etc/apache2/sites-available/000-default.conf
 RUN rm -f /etc/apache2/sites-available/default-ssl.conf
@@ -32,5 +30,4 @@ RUN a2ensite site3com.conf
 RUN chown -R $USER:$USER /var/www/
 RUN chmod -R 755 /var/www
 
-RUN systemctl stop apache2
 RUN systemctl start apache2
