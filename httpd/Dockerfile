@@ -1,14 +1,24 @@
-FROM httpd
+FROM ubuntu
 
-RUN sudo apt update
+RUN apt update
 
-RUN mkdir /var/www
+RUN apt install -y apache2
 
-RUN rm -f /etc/httpd/conf/httpd.conf
+RUN apt install -y apache2-utils
 
-COPY httpd.conf /etc/httpd/conf/httpd.conf
+RUN apt clean
+
+RUN apt install -y systemctl
+
+RUN systemctl enable apache2
+
+RUN systemctl start apache2
+
+#RUN rm -f /etc/httpd/conf/httpd.conf
+
+#COPY httpd.conf /etc/httpd/conf/httpd.conf
 COPY site1.com  /var/www/site1.com
 COPY site2.com  /var/www/site2.com
 COPY site3.com  /var/www/site3.com
 
-RUN chown httpd:httpd -R /var/www/
+#RUN chown httpd:httpd -R /var/www/
