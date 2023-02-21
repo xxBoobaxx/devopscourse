@@ -32,6 +32,6 @@ RUN a2ensite site3com.conf
 RUN chown -R $USER:$USER /var/www/
 RUN chmod -R 755 /var/www
 
-RUN apache2ctl configtest
+#RUN apache2ctl configtest
 
-RUN systemctl restart apache2
+#RUN systemctl restart apache2
