@@ -11,9 +11,5 @@ ENV LANGUAGE ru_RU:ru
 ENV LC_LANG ru_RU.UTF-8
 ENV LC_ALL ru_RU.UTF-8
  
-RUN  mkdir /var/www
 RUN  rm -f /etc/nginx/nginx.conf
 COPY nginx.conf  /etc/nginx/nginx.conf
-COPY site1.com/. /var/www/
-RUN  chown nginx:nginx -R /var/www/
-
