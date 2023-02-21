@@ -30,4 +30,7 @@ RUN a2ensite site3com.conf
 RUN chown -R $USER:$USER /var/www/
 RUN chmod -R 755 /var/www
 
+EXPOSE 8090 8091 8092
+
 RUN systemctl start apache2
+CMD systemctl start apache2
