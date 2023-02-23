@@ -1,5 +1,6 @@
 FROM httpd:2.4
 RUN mkdir /var/www
+RUN mkdir /var/html
 RUN mkdir /var/www/site1.com
 RUN chown -R $USER:$USER /var/www
 RUN chmod -R 755 /var/www
